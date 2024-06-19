@@ -2,10 +2,10 @@ function Navbar() {
 
 
     return (
-        <div className="row">
+        <div>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <div className="collapse navbar-collapse row" id="navbarText">
+                    <div className="collapse navbar-collapse" id="navbarText">
                         
                             <div className='col-md-2' style={{ backgroundColor: 'whitesmoke', height: '60px' }}>
                                 {/* Logo image/icon */}
@@ -13,7 +13,7 @@ function Navbar() {
                             
                             <div className="col-md-8" style={{ fontSize: 'large', color: 'white'}} >
                             <center>
-                            Student Portal
+                            <h3>Student Portal</h3>
                             </center>
                             </div>
                             <div className="d-flex flex-row-reverse col-md-2" style={{ position: 'absolute', right: '0', marginRight: '2%' }}>

@@ -5,34 +5,34 @@ export default function AdminSidebar() {
     return (
         <div>           
             <div className="sidebar-content " style={{ marginTop: '30px' }}>
-                <button className="btn btn-lg  btn-sidebar">Dashboard</button>                
+            <Link className="btn btn-lg  btn-sidebar" to='/AdminDashboard'>Dashboard</Link>                   
             </div>            
             <div className="sidebar-content">
                 {/* Accordian for Quiz */}
                 <div className="accordion accordion-flush" id="accordionExample" >
                     <div className="accordion-item">
                         <h2 className="accordion-header">
-                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button className="accordion-button btn-sidebar" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Registration
                             </button>
                         </h2>
-                        <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body" >
-                                <button className="btn btn-lg  btn-sidebar">Teacher </button>
-                                <button className="btn btn-lg  btn-sidebar">Student</button>
+                            <Link className="btn btn-lg  btn-sidebar" to=''>Teacher</Link>
+                            <Link className="btn btn-lg  btn-sidebar" to=''>Student</Link>
                             </div>
                         </div>
                     </div>
                 </div>               
             </div> 
             <div className="sidebar-content">
-                <button className="btn btn-lg  btn-sidebar">Add Announcement</button>                
+                <Link className="btn btn-lg  btn-sidebar">Add Announcement</Link>                
             </div>  
             <div className="sidebar-content">
-                <button className="btn btn-lg  btn-sidebar">Add Timetable</button>                
+                <Link className="btn btn-lg  btn-sidebar">Add Timetable</Link>                
             </div>  
             <div className="sidebar-content">
-                <button className="btn btn-lg  btn-sidebar">Add Category</button>                
+                <Link className="btn btn-lg  btn-sidebar">Add Category</Link>                
             </div>            
         </div>
     )

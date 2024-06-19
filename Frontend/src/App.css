@@ -1,50 +1,74 @@
-.sidebar{
+.sidebar {
   background-color: bisque;
-  height: 100vh;  
+  height: 100%;
   position: absolute;
   left: 0;
 }
-.sidebar-content{ 
-  color: black;  
+
+.sidebar-content {
+  color: black;
   width: 100%;
   height: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.336);
 }
-.btn-sidebar{  
-  width:100%; 
-  border-radius: 0px; 
+
+.btn-sidebar {
+  width: 100%;
+  border-radius: 0px;
   text-align: left;
   font-size: larger;
   outline: none;
   border: none;
   color: rgb(121, 45, 0);
-    
+
 }
-.btn-sidebar:hover{
-  background-color: rgb(247, 172, 80);
+
+.btn-sidebar:hover {
+  background-color: #f7ac50;
   color: rgb(255, 255, 255);
 }
-.accordion{
+
+.accordion {
   --bs-accordion-btn-bg: bisque;
-  --bs-accordion-active-bg: rgb(247, 172, 80);
-  --bs-accordion-active-color: white;
+  --bs-accordion-active-bg: bisque;
+  --bs-accordion-active-color: rgb(121, 45, 0);
   --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-bg: rgba(248, 212, 170, 0.74);
 }
-.accordion-button{
+
+.accordion-button {
   color: rgb(121, 45, 0);
   font-size: large;
 }
 
 /* EventBar */
-.card{
-  --bs-card-bg:bisque;
-  --bs-card-title-color:  rgb(121, 45, 0);
+.card {
+  --bs-card-bg: bisque;
+  --bs-card-title-color: rgb(121, 45, 0);
   --bs-card-border-radius: 0;
-  --bs-card-border-color : none;
+  --bs-card-border-color: none;
 }
+
 /* Navbar */
-.navbar{
+.navbar {
   background-color: rgb(121, 45, 0);
   height: 75px;
+}
+
+.heading {
+  background-color: rgb(247, 172, 80);
+  color: white;
+  height: 45px;
+  width: 100%;
+}
+
+.table-striped {
+  --bs-table-striped-bg: rgba(121, 44, 0, 0.13);
+  text-align: center;
+  height: 80px;
+  vertical-align: middle;
+}
+
+.shadow {
+  box-shadow: 1px 0px 20px 5px rgba(0, 0, 0, 0.075);
 }
