@@ -8,6 +8,12 @@ import EventBar from './Components/EventBar';
 import StudentDashboard from './Pages/StudentDashboard';
 import TeacherSidebar from './Components/TeacherSidebar';
 import Help from './Pages/Help';
+import CompletedQuiz from './Pages/CompletedQuiz';
+import TeacherDashboard from './Pages/TeacherDashboard';
+import AddQuiz from './Pages/AddQuiz';
+import TeachResult from './Pages/TeachResult';
+import QuizDetails from './Pages/QuizDetails';
+import ScheduledQuiz from './Pages/ScheduledQuiz';
 
 function App() {
 
@@ -29,8 +35,15 @@ function App() {
         <div className='col-md-8 offset-md-2' style={{ border: "1px solid black" }}>
           <Routes>
             {/* <Route path='/' element={<Dashboard/>}/>     */}
-            <Route path='/StudentDashboard' element={<StudentDashboard />} />
-            <Route path='/Help' element={<Help />} />
+           {/* <Route path='/StudentDashboard' element={<StudentDashboard />} /> */}
+           <Route path='/TeacherDashboard' element={<TeacherDashboard/>}/>
+
+           <Route path='/completed-quiz' element={<CompletedQuiz />} />
+           <Route path='/ScheduledQuiz' element={<ScheduledQuiz/>}/>
+           <Route path='/AddQuiz' element={<AddQuiz/>}/>
+           <Route path='/TeachResult' element={<TeachResult/>}/>
+           <Route path='/Help' element={<Help />} /> 
+           <Route path='/QuizDetails' element={<QuizDetails/>}/>
 
           </Routes>
         </div>
