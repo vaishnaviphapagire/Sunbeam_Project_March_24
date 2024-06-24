@@ -36,10 +36,11 @@ function TeachResult() {
 
     return (
         <div className="container-fluid mt-3">
-            <div className="row">
-            <h2 className='heading'>Class Result</h2>
+             <h2 className='heading'>Class Result</h2>
+            <div className="row mt-4">
+           
                 <div className="col-md-4 mb-3">
-                    <div className="card">
+                    <div className="card shadow exam-card">
                         
                         <div className="card-body">
                             <h5 className="card-title">Students Attempted Quiz</h5>
@@ -48,7 +49,7 @@ function TeachResult() {
                     </div>
                 </div>
                 <div className="col-md-4 mb-3">
-                    <div className="card">
+                    <div className="card shadow exam-card">
                         <div className="card-body">
                             <h5 className="card-title">Students Not Attempted Quiz</h5>
                             <p className="card-text">{notAttempted}</p>
@@ -56,7 +57,7 @@ function TeachResult() {
                     </div>
                 </div>
                 <div className="col-md-4 mb-3">
-                    <div className="card">
+                    <div className="card shadow exam-card">
                         <div className="card-body">
                             <h5 className="card-title">Average Percentage</h5>
                             <p className="card-text">{averagePercentage}%</p>

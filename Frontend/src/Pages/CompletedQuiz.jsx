@@ -16,6 +16,20 @@ const CompletedQuiz = () => {
       course: 'Physics',
       scheduledDate: '2023-03-15T00:00:00Z',
       addedBy: 'Prof. '
+    },
+    {
+      id: 3,
+      name: 'Physics Midterm',
+      course: 'Physics',
+      scheduledDate: '2023-03-15T00:00:00Z',
+      addedBy: 'Prof. '
+    },
+    {
+      id: 2,
+      name: 'Physics Midterm',
+      course: 'Physics',
+      scheduledDate: '2023-03-15T00:00:00Z',
+      addedBy: 'Prof. '
     }
   ];
 
@@ -24,29 +38,33 @@ const CompletedQuiz = () => {
   };
 
   return (
-    <Container className="completed-exams mt-5">
+   
+         <Container className=" mt-5 mt-3">
       <h2 className='heading'>Completed Quiz</h2>
-      <Row>
+      <Row className='mt-4'>
         {quiz.map((quiz, index) => (
           <Col md={4} key={index} className="mb-4">
-            <Card className="exam-card">
+            <Card className="exam-card shadow mb-4 ms-2" >
               <Card.Body>
-                <Card.Title>{quiz.name}</Card.Title>
+                <Card.Title><h4>{quiz.name}</h4></Card.Title>
+                <hr />
                 <Card.Text>
-                  <strong>Course:</strong> {quiz.course}<br />
-                  <strong>Scheduled:</strong> {new Date(quiz.scheduledDate).toLocaleDateString()}<br />
-                  <strong>Added by:</strong> {quiz.addedBy}
+                  <strong>Course : </strong> {quiz.course}<br />
+                  <strong>Scheduled : </strong> {new Date(quiz.scheduledDate).toLocaleDateString()}<br />
+                  <strong>Added by : </strong> {quiz.addedBy}
                 </Card.Text>
                 {/* <Button variant="primary" onClick={() => viewQuestions(quiz.id)}>
                   View Questions
                 </Button>  */}
-                 <Link className="btn btn-primary me-2" to="/QuizDetails">View Questions</Link>
+                 <Link className="btn btn-bd-primary me-2" to="/QuizDetails">View Questions</Link>
               </Card.Body>
             </Card>
           </Col>
         ))}
       </Row>
     </Container>
+  
+ 
   );
 };
 

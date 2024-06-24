@@ -1,9 +1,9 @@
-export default function Help(){
+export default function AdminDashboard(){
 
     return(
         <div>
             <center>
-               This is the Help Desk
+               This is Admin Dashboard
             </center>
         </div>
     )

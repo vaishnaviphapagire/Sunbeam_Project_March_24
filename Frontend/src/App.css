@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: bisque;
+  background-color: rgb(255, 241, 224);
   height: 100%;
   position: absolute;
   left: 0;
@@ -29,8 +29,8 @@
 }
 
 .accordion {
-  --bs-accordion-btn-bg: bisque;
-  --bs-accordion-active-bg: bisque;
+  --bs-accordion-btn-bg: rgb(255, 241, 224);
+  --bs-accordion-active-bg: rgb(255, 241, 224);
   --bs-accordion-active-color: rgb(121, 45, 0);
   --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-bg: rgba(248, 212, 170, 0.74);
@@ -72,3 +72,28 @@
 .shadow {
   box-shadow: 1px 0px 20px 5px rgba(0, 0, 0, 0.075);
 }
+ .btn-bd-primary{
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: white;
+  --bs-btn-hover-color: rgb(121, 45, 0);
+  --bs-btn-hover-bg: bisque;
+  --bs-btn-bg: #792d00;
+ }
+
+ .exam-card{
+ background-color: rgba(255, 228, 196, 0.11);
+ border-radius: 5px;
+ }
+ .update{
+background-color: #f7ac5056;
+border: 0px;
+color: rgb(121, 45, 0);
+ }
+ .update:hover{
+  background-color: #f7ac50;
+  color:white;
+
+ }
+ .delete{
+
+ }

@@ -25,8 +25,8 @@ export default function StudentSidebar() {
                         </h2>
                         <div id="collapseOne" className="accordion-collapse collapse " data-bs-parent="#accordionExample">
                             <div className="accordion-body" >
-                                <Link className="btn btn-lg  btn-sidebar">Completed Quiz</Link>
-                                <Link className="btn btn-lg  btn-sidebar">Scheduled Quiz</Link>
+                                <Link className="btn btn-lg  btn-sidebar" to='/CompletedQuiz'>Completed Quiz</Link>
+                                <Link className="btn btn-lg  btn-sidebar" to='/ScheduledQuiz'>Scheduled Quiz</Link>
                             </div>
                         </div>
                     </div>
