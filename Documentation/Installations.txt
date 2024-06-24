@@ -1,0 +1,9 @@
+Installations
+
+1. npm install react-apexcharts apexcharts
+- import chart from 'react-apexcharts'
+
+2. yarn add react-redux @reduxjs/toolkit
+
+3. sudo npm install react-bootstrap-validation -save
+4. npm install react-bootstrap bootstrap
