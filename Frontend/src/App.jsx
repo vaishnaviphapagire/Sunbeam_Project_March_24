@@ -17,7 +17,8 @@ import TeacherAddQuiz from './Pages/AddQuiz';
 import TeachResult from './Pages/TeachResult';
 import TeacherQuizDetails from './Pages/TeacherQuizDetails';
 import ScheduledQuiz from './Pages/ScheduledQuiz';
-
+import AddAnnouncement from './Pages/AddAnnouncement';
+import AddCategory from './Pages/AddCategory';
 function App() {
 
   const user = useSelector((state) => state.user)
@@ -52,6 +53,8 @@ function App() {
                   <Route path='/TeachResult' element={<TeachResult />} />
                   <Route path='/QuizDetails' element={<TeacherQuizDetails />} />
                   <Route path='/Help' element={<Help />} />
+                  <Route path='/AddAnnouncement' element={<AddAnnouncement/>}/>
+                  <Route path='/AddCategory' element={<AddCategory/>}/>
                 </Routes>
               </div>
               <div className='col-md-2' >

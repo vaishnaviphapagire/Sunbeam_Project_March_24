@@ -52,8 +52,20 @@ export default function Login() {
 
                 <div class="mb-3 mt-3">
                     <label for="formGroupExampleInput2" class="mb-3">Role</label>
-                    <input type="text" class="form-control" placeholder="Admin/Teacher/Student" value={role}
-                        onChange={(e) => setRole(e.target.value)} />
+                    {/* <input type="text" class="form-control" placeholder="Admin/Teacher/Student" value={role}
+                        onChange={(e) => setRole(e.target.value)} /> */}
+                    <select
+                        className="form-control"
+                        id="roleSelect"
+                        value={role}
+                        onChange={(e) => setRole(e.target.value)}
+                    >
+                        <option value="">Select Role</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Student">Student</option>
+                    </select>
+
                 </div>
                 <center>
                     <button className="btn btn-bd-primary mb-3" onClick={OnLogin}>Login</button>

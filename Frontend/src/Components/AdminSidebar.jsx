@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminSidebar() {
+    const navigate=useNavigate();
+
+    const navigateToAnnouncement=()=>{
+        navigate('/AddAddAnnouncement')
+    }
+    const navigateToCategory=()=>{
+        navigate('/AddCategory')
+    }
 
     return (
         <div>           
@@ -26,13 +35,13 @@ export default function AdminSidebar() {
                 </div>               
             </div> 
             <div className="sidebar-content">
-                <Link className="btn btn-lg  btn-sidebar">Add Announcement</Link>                
+                <Link className="btn btn-lg  btn-sidebar" to="/AddAnnouncement" onClick={navigateToAnnouncement}>Add Announcement</Link>                
             </div>  
             <div className="sidebar-content">
-                <Link className="btn btn-lg  btn-sidebar">Add Timetable</Link>                
+                <Link className="btn btn-lg  btn-sidebar" to="" >Add Timetable</Link>                
             </div>  
             <div className="sidebar-content">
-                <Link className="btn btn-lg  btn-sidebar">Add Category</Link>                
+                <Link className="btn btn-lg  btn-sidebar" to="/AddCategory" onClick={navigateToCategory}>Add Category</Link>                
             </div>            
         </div>
     )
