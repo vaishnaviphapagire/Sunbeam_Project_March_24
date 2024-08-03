@@ -19,6 +19,11 @@ import TeacherQuizDetails from './Pages/TeacherQuizDetails';
 import ScheduledQuiz from './Pages/ScheduledQuiz';
 import AddAnnouncement from './Pages/AddAnnouncement';
 import AddCategory from './Pages/AddCategory';
+import AddBatch from './Pages/AddBatch';
+import BatchDetails from './Pages/BatchDetails';
+import Register from './Pages/Register';
+import AddTimetable from './Pages/AddTimeTable';
+import BatchStudents from './Pages/BatchStudents'
 function App() {
 
   const user = useSelector((state) => state.user)
@@ -55,6 +60,12 @@ function App() {
                   <Route path='/Help' element={<Help />} />
                   <Route path='/AddAnnouncement' element={<AddAnnouncement/>}/>
                   <Route path='/AddCategory' element={<AddCategory/>}/>
+                  <Route path='/AddBatch' element={<AddBatch/>}/>
+                  <Route path='/BatchDetails' element={<BatchDetails/>}/>
+                  <Route path='/BatchStudents' element={<BatchStudents/>}/>
+                  <Route path='/Register' element={<Register/>}/>
+                  <Route path='/AddTimeTable' element={<AddTimetable/>}/>
+   
                 </Routes>
               </div>
               <div className='col-md-2' >
