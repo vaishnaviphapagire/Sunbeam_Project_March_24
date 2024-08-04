@@ -7,3 +7,8 @@ Installations
 
 3. sudo npm install react-bootstrap-validation -save
 4. npm install react-bootstrap bootstrap
+
+-----------------------------
+react icons 
+https://react-icons.github.io/react-icons/icons/fa/
+$ npm -i react-icons
