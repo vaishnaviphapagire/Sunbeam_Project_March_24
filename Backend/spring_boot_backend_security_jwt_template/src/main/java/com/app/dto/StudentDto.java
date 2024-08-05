@@ -23,7 +23,12 @@ public class StudentDto {
 
 	@NotNull
 	private BatchDto batch;
-
+	
+	
+	private String guardianName;
+	
+	private String guardianPhone;
+	
 	public StudentDto(@NotNull UserDto user, Long rollNo, @NotNull BatchDto batch) {
 		super();
 		this.user = user;

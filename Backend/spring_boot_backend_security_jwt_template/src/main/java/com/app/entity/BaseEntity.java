@@ -16,9 +16,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-
-
 @Setter
 @Getter
 @NoArgsConstructor
@@ -34,10 +31,9 @@ public class BaseEntity {
 
 	@UpdateTimestamp
 	private LocalDateTime updatedTime;
-	
-	@Column(columnDefinition="tinyint(1) default 0")
-	private boolean isDeleted;
 
+	@Column(columnDefinition = "tinyint(1) default 0")
+	private boolean isDeleted;
 
 	public BaseEntity(Long id, LocalDateTime createdTime, LocalDateTime updatedTime, boolean isDeleted) {
 		super();
@@ -46,7 +42,5 @@ public class BaseEntity {
 		this.updatedTime = updatedTime;
 		this.isDeleted = isDeleted;
 	}
-	
-	
 
 }

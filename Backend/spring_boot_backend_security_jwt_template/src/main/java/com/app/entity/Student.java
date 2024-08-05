@@ -8,6 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Transient;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,8 @@ import lombok.Setter;
 @PrimaryKeyJoinColumn(name = "id")
 public class Student extends UserEntity {
 	
+	
+	@Transient
 	private static Long genrationRollNumber =  10191324L;
 	
 	
@@ -31,6 +34,13 @@ public class Student extends UserEntity {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "batch_id" , nullable = false)
 	private Batch batch;
+	
+	
+	private String guardianName;
+	
+	private String guardianPhone;
+	
+	
 
 	public Student(Long rollNo, Batch batch) {
 		super();
