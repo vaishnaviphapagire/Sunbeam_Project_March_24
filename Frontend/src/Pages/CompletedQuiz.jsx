@@ -39,7 +39,7 @@ const CompletedQuiz = () => {
 
   return (
    
-         <Container className=" mt-5 mt-3">
+         <Container className="mt-3">
       <h2 className='heading'>Completed Quiz</h2>
       <Row className='mt-4'>
         {quiz.map((quiz, index) => (

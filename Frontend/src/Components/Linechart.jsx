@@ -32,7 +32,7 @@ function Linechart()
             //   chart: {
             //     background: '#EBF1FF'
             // },
-            colors: ['#792d00', '#f7ac50', '#411800'],           
+            colors: ['#1A2130', '#83B4FF','#5A72A0'],           
             title:{ text:"My Progress in class"},
             xaxis:{
                 title:{text:"Quizes"},

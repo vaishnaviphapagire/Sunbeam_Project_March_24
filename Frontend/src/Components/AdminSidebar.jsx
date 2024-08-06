@@ -49,19 +49,26 @@
 
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logoutAction } from '../Features/UserSlice';
 
 export default function AdminSidebar() {
     const navigate = useNavigate();
-
+    const dispatch = useDispatch();
     const navigateToRegister = (role) => {
         navigate('/Register', { state: { role } });
     };
 
+    const onLogout = () => {
+        dispatch(logoutAction());
+        navigate('/Login');
+    };
+
     return (
-        <div>           
+        <div>
             <div className="sidebar-content" style={{ marginTop: '30px' }}>
-                <Link className="btn btn-lg btn-sidebar" to='/AdminDashboard'>Dashboard</Link>                   
-            </div>            
+                <Link className="btn btn-lg btn-sidebar" to='/AdminDashboard'>Dashboard</Link>
+            </div>
             <div className="sidebar-content">
                 <div className="accordion accordion-flush" id="accordionExample">
                     <div className="accordion-item">
@@ -77,23 +84,27 @@ export default function AdminSidebar() {
                             </div>
                         </div>
                     </div>
-                </div>               
-            </div> 
+                </div>
+            </div>
             <div className="sidebar-content">
-                <Link className="btn btn-lg btn-sidebar" to="/AddAnnouncement">Add Announcement</Link>                
-            </div>  
+                <Link className="btn btn-lg btn-sidebar" to="/AddAnnouncement">Add Announcement</Link>
+            </div>
             <div className="sidebar-content">
-                <Link className="btn btn-lg btn-sidebar" to="/AddTimeTable">Add Timetable</Link>                
-            </div>  
+                <Link className="btn btn-lg btn-sidebar" to="/AddTimeTable">Add Timetable</Link>
+            </div>
             <div className="sidebar-content">
-                <Link className="btn btn-lg btn-sidebar" to="/AddCategory">Add Category</Link>                
-            </div>    
+                <Link className="btn btn-lg btn-sidebar" to="/AddCategory">Add Category</Link>
+            </div>
             <div className="sidebar-content">
-                <Link className="btn btn-lg btn-sidebar" to="/AddBatch">Add Batch</Link>                
-            </div>   
+                <Link className="btn btn-lg btn-sidebar" to="/AddBatch">Add Batch</Link>
+            </div>
             <div className="sidebar-content">
-                <Link className="btn btn-lg btn-sidebar" to="/BatchDetails">View Batch Details</Link>                
-            </div>      
+                <Link className="btn btn-lg btn-sidebar" to="/BatchDetails">View Batch Details</Link>
+            </div>
+            <div className="sidebar-content">
+                <button className="btn btn-lg btn-sidebar" style={{ color: 'black' }} onClick={onLogout}>Logout</button>
+
+            </div>
         </div>
     );
 }

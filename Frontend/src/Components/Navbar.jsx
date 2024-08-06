@@ -21,7 +21,7 @@ function Navbar() {
 
     const popover = (
         <Popover id="popover-basic">
-            <Popover.Header as="h3" style={{backgroundColor:`rgb(255, 241, 224)`}}>Edit Profile</Popover.Header>
+            <Popover.Header as="h3" style={{ backgroundColor: `rgb(255, 241, 224)` }}>Edit Profile</Popover.Header>
             <Popover.Body>
                 <form>
                     <div className="mb-3">
@@ -44,27 +44,27 @@ function Navbar() {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg">
+            {/* <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <div className="collapse navbar-collapse" id="navbarText">
-                        <div className='col-md-2' style={{ backgroundColor: 'whitesmoke', height: '60px' }}>
-                            {/* Logo image/icon */}
+                    <div className="collapse navbar-collapse"  id="navbarText">
+                        <div className='col-md-2 col-xs-2' style={{ backgroundColor: 'whitesmoke', height: '60px' }}>
+                            Logo image/icon
                         </div>
-                        <div className="col-md-8" style={{ fontSize: 'large', color: 'white' }}>
+                       
+                        <div className="col-md-10 col-xs-8" style={{ fontSize: 'large', color: 'white' }}>
                             <center>
                                 <h3>Exam Portal</h3>
                             </center>
                         </div>
-                        <div className="d-flex flex-row-reverse" style={{ position: 'absolute', right: '0', marginRight: '2%' }}>
+                        <div className="d-flex flex-row-reverse col-md-2 col-xs-2" style={{ position: 'absolute', right: '0', marginRight: '2%' }}>
                             <OverlayTrigger
                                 trigger="click"
                                 placement="bottom"
                                 overlay={popover}
                                 show={showPopover}
-                                onToggle={onEditProfile}
-                            >
+                                onToggle={onEditProfile}>
                                 <Button variant="light" className="p-2" style={{ backgroundColor: 'whitesmoke', height: '60px', width: '60px', borderRadius: '50%' }}>
-                                    {/* Profile Icon */}
+                                    Profile Icon
                                 </Button>
                             </OverlayTrigger>
                             <div className="p-2" style={{ color: 'white', marginTop: '4%' }}>
@@ -79,9 +79,41 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
+            </nav> */}
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        Logo image/icon
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse  flex-row-reverse" id="navbarNav">
+                        <ul class="navbar-nav ">
+                       
+                            <li class="nav-item">
+                            Welcome, Name
+                                <OverlayTrigger
+                                    trigger="click"
+                                    placement="bottom"
+                                    overlay={popover}
+                                    show={showPopover}
+                                    onToggle={onEditProfile}>
+                                    <Button variant="light" className="p-2" style={{ backgroundColor: 'whitesmoke', height: '60px', width: '60px', borderRadius: '50%', marginRight:'5px', marginLeft:'5px'  }}>
+                                        Profile Icon
+                                    </Button>
+                                </OverlayTrigger>                               
+                            </li>
+                            <li class="nav-item" style={{ marginTop: '4%' }} >
+                            <button className="btn " style={{ color: '#efe1d1' }} onClick={onLogout}>Logout</button>                          
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     );
 }
 
 export default Navbar;
+

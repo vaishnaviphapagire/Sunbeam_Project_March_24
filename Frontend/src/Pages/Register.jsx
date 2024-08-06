@@ -150,7 +150,7 @@ export default function Register() {
 
     return (
         <div className="container">
-            <div className="row shadow col-md-6 offset-md-3" style={{ borderRadius: '10px', marginTop: '150px' }}>
+            <div className="row shadow col-md-6 offset-md-3 mt-3 mb-5" style={{ borderRadius: '10px' }}>
                 <div className="heading" style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}>
                     <h2>Exam Portal Registration Page</h2>
                 </div>

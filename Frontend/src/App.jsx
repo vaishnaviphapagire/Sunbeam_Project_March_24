@@ -32,17 +32,17 @@ function App() {
       {
         user.loginStatus ? (
           <div className='container-fluid'>
-            <div className='row col-12'>
+            <div className='row col-12' >
               {user.loginStatus && < Navbar></Navbar>}
             </div>
-            <div className='container-fluid row' > 
-              <div className='col-md-2 sidebar shadow'  onLoad={redirect}>
+            <div className='container-fluid row'> 
+              <div className='col-md-2 shadow' onLoad={redirect} style={{backgroundColor:''}}>
                 {
                   user.loginRole === "Admin" ? <AdminSidebar />
                     : (user.loginRole === "Teacher" ? <TeacherSidebar /> : <StudentSidebar />)
                 }
               </div>
-              <div className='col-md-8 offset-md-2' >
+              <div className='col-md-8  col-sx-12' >
                 <Routes>
                   {
                     user.loginRole === "Admin" ? <Route path='/' element={<AdminDashboard />} />
@@ -64,17 +64,18 @@ function App() {
                   <Route path='/BatchDetails' element={<BatchDetails/>}/>
                   <Route path='/BatchStudents' element={<BatchStudents/>}/>
                   <Route path='/Register' element={<Register/>}/>
-                  <Route path='/AddTimeTable' element={<AddTimetable/>}/>
-   
+                  <Route path='/AddTimeTable' element={<AddTimetable/>}/>   
                 </Routes>
               </div>
-              <div className='col-md-2' >
-
+              <div className='col-md-2 ' >
                 {(user.loginRole === "Teacher") && <EventBar></EventBar>}
                 {(user.loginRole === "Student") && <EventBar></EventBar>}
                 {(user.loginRole === "Admin") && <EventBar></EventBar>}
               </div>
             </div>
+            <footer className ='mt-3'style={{backgroundColor:'#A78295'}}>
+        this is my footer 
+      </footer>
           </div>
 
         ) : (
@@ -84,12 +85,10 @@ function App() {
 
         )
       }
+
+     
     </div>
-
-
-
   )
-
 }
 
 export default App;

@@ -40,7 +40,7 @@ const ScheduledQuiz = () => {
 
   return (
     //depending on role display different quizes for student and teacher
-    <Container className="mt-5 mt-3">
+    <Container className=" mt-3">
       <h2 className="heading">Scheduled Quiz</h2>
       <Row className='mt-4'>
         {exams.map((exam, index) => (

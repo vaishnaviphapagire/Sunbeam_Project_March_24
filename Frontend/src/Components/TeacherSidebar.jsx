@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { logoutAction } from '../Features/UserSlice';
 export default function TeacherSidebar() {
 
     const navigate = useNavigate();
-
+    const dispatch = useDispatch();
     const navigateToCompletedQuiz = () => {
         navigate('/completed-quiz');
+    };
+    const onLogout = () => {
+        dispatch(logoutAction());
+        navigate('/Login');
     };
 
 
@@ -37,6 +42,11 @@ export default function TeacherSidebar() {
             <div className="sidebar-content">
                 <Link className="btn btn-lg  btn-sidebar" to='/TeachResult'>Result</Link>
             </div>
+            <div className="sidebar-content">
+                <button className="btn btn-lg btn-sidebar" style={{ color: 'black' }} onClick={onLogout}>Logout</button>
+
+            </div>
+           
             {/* <div className="sidebar-content">
                 <button className="btn btn-lg  btn-sidebar">Help</button>
             </div> */}

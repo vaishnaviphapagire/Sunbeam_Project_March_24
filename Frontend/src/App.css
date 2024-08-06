@@ -1,8 +1,8 @@
 .sidebar {
-  background-color: rgb(255, 241, 224);
+  background-color:#fdffe200;
   height: 100%;
   position: absolute;
-  left: 0;
+  /* left: 0; */
 }
 
 .sidebar-content {
@@ -19,51 +19,52 @@
   font-size: larger;
   outline: none;
   border: none;
-  color: rgb(121, 45, 0);
+  color: #1A2130;
 
 }
 
 .btn-sidebar:hover {
-  background-color: #f7ac50;
-  color: rgb(255, 255, 255);
+  background-color: #efe1d15d;
+  color: #331D2C;
 }
 
 .accordion {
-  --bs-accordion-btn-bg: rgb(255, 241, 224);
-  --bs-accordion-active-bg: rgb(255, 241, 224);
-  --bs-accordion-active-color: rgb(121, 45, 0);
+  --bs-accordion-btn-bg: #fdffe200;
+  --bs-accordion-active-bg: #fdffe200;
+  --bs-accordion-active-color: #1A2130;
   --bs-accordion-btn-focus-box-shadow: none;
-  --bs-accordion-bg: rgba(248, 212, 170, 0.74);
+  --bs-accordion-bg: '#5A72A0';
 }
 
 .accordion-button {
-  color: rgb(121, 45, 0);
+  color: #1A2130;
   font-size: large;
 }
 
 /* EventBar */
 .card {
-  --bs-card-bg: bisque;
-  --bs-card-title-color: rgb(121, 45, 0);
+  --bs-card-bg: #efe1d105;
+  --bs-card-title-color: #331D2C;
   --bs-card-border-radius: 0;
   --bs-card-border-color: none;
 }
 
 /* Navbar */
 .navbar {
-  background-color: rgb(121, 45, 0);
-  height: 75px;
+  background-color: #331D2C;
+  color:#efe1d1;
+  /* height: 75px; */
 }
 
 .heading {
-  background-color: rgb(247, 172, 80);
+  background-color: #A78295;
   color: white;
   height: 45px;
   width: 100%;
 }
 
 .table-striped {
-  --bs-table-striped-bg: rgba(121, 44, 0, 0.13);
+  --bs-table-striped-bg: #efe1d15d;
   text-align: center;
   height: 80px;
   vertical-align: middle;
@@ -75,13 +76,13 @@
  .btn-bd-primary{
   --bs-btn-font-weight: 600;
   --bs-btn-color: white;
-  --bs-btn-hover-color: rgb(121, 45, 0);
-  --bs-btn-hover-bg: bisque;
-  --bs-btn-bg: #792d00;
+  --bs-btn-hover-color: #A78295;
+  --bs-btn-hover-bg: #ffffff;
+  --bs-btn-bg: #3F2E3E;
  }
 
  .exam-card{
- background-color: rgba(255, 228, 196, 0.11);
+ background-color: #775d7518; 
  border-radius: 5px;
  }
  .update{
@@ -90,7 +91,7 @@ border: 0px;
 color: rgb(121, 45, 0);
  }
  .update:hover{
-  background-color: #f7ac50;
+  background-color: #5A72A0;
   color:white;
 
  }

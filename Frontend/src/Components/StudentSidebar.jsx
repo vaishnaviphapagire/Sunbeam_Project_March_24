@@ -1,14 +1,18 @@
 import { Link, useNavigate} from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { logoutAction } from '../Features/UserSlice';
 export default function StudentSidebar() {
 
     const navigate = useNavigate()
-
+    const dispatch = useDispatch();
     
     // function OnDashboard(){
     //     navigate('/StudentDashboard')
     // }
-
+    const onLogout = () => {
+        dispatch(logoutAction());
+        navigate('/Login');
+    };
     return (
         <div>           
             <div className="sidebar-content " style={{ marginTop: '30px' }}>
@@ -39,7 +43,10 @@ export default function StudentSidebar() {
             <Link className="btn btn-lg  btn-sidebar" to='/Help'>Help</Link>                
             </div>
 
+            <div className="sidebar-content">
+                <button className="btn btn-lg btn-sidebar" style={{ color: 'black' }} onClick={onLogout}>Logout</button>
 
+            </div>
         </div>
     )
 }
